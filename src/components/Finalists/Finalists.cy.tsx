@@ -3,7 +3,7 @@ import Finalists from "./Finalists";
 
 describe("<Finalists />", () => {
   it("renders", () => {
-    cy.mount(<Finalists />);
+    cy.mount(<Finalists teamName={[]} />);
     cy.get(".Finalists button").contains("Submit");
   });
 

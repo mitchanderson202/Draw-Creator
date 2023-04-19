@@ -23,7 +23,9 @@ describe("<Teams />", () => {
     const teamName = "Test Team";
     cy.get(".Teams input").type(teamName);
     cy.get(".Teams button[type='submit']").click();
-    cy.get(".Teams input").value = "Team already exists";
+    cy.get(".Teams input").type(teamName);
+    cy.get(".Teams button[type='submit']").click();
+    cy.get(".Teams input").should("have.value", "Team already exists");
   });
 
   it("requires team name to be entered", () => {
@@ -36,6 +38,6 @@ describe("<Teams />", () => {
   it("renders finalists field", () => {
     cy.mount(<Teams />);
     cy.get(".Finalise").click();
-    cy.mount(<Finalists />);
+    cy.mount(<Finalists teamName={[]} />);
   });
 });
