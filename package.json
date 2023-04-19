@@ -1,0 +1,37 @@
+{
+  "name": "drawcreator",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.62.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "cypress": "^12.10.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.0"
+  },
+  "description": "vite react ts\r mobx\r scss\r # Draw-Creator",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitchanderson202/Draw-Creator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mitchanderson202/Draw-Creator/issues"
+  },
+  "homepage": "https://github.com/mitchanderson202/Draw-Creator#readme"
+}

@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 10vh 1fr 1fr 1fr;
+  justify-content: center;
+}
