@@ -1,6 +1,6 @@
 import Draw from "../Draw/Draw";
 import "./Rounds.scss";
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 const Rounds = () => {
   const [startDate, setStartDate] = useState("");
@@ -45,7 +45,7 @@ const Rounds = () => {
         ) : (
           ""
         )}
-        <button onClick={handleConfirm}>CONFIRM</button>
+        <button onClick={handleConfirm}>FINALISE</button>
         {renderDraw && <Draw />}
       </div>
     </div>

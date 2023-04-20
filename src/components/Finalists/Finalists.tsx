@@ -1,3 +1,4 @@
+import Rounds from "../Rounds/Rounds";
 import "./Finalists.scss";
 import { useState } from "react";
 
@@ -49,9 +50,19 @@ const Finalists = ({ teamName }: FinalistsProps) => {
           <input required className="FinalistsInput1" /> vs{" "}
           <input required className="FinalistsInput2" />
         </h1>
-        <button>Submit</button>
+        <button>FINALISE</button>
       </form>
-      {confirmFinalists && <p>{confirmFinalists}</p>}
+
+      {confirmFinalists === "Invalid team names" ? (
+        <p>{confirmFinalists}</p>
+      ) : (
+        confirmFinalists && (
+          <div>
+            <p>{confirmFinalists}</p>
+            <Rounds />
+          </div>
+        )
+      )}
     </div>
   );
 };

@@ -8,7 +8,6 @@ function App() {
     <div className="App">
       <Welcome />
       <Teams />
-      <Rounds />
     </div>
   );
 }

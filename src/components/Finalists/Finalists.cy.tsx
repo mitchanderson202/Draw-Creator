@@ -3,10 +3,9 @@ import Finalists from "./Finalists";
 import Draw from "../Draw/Draw";
 
 describe("<Finalists />", () => {
-  beforeEach(() => {});
   it("renders", () => {
     cy.mount(<Finalists teamName={[]} />);
-    cy.get(".Finalists button").contains("Submit");
+    cy.get(".Finalists button").contains("FINALISE");
   });
 
   it("displays error when invalid teams are submitted", () => {
