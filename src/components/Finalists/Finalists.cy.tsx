@@ -3,6 +3,7 @@ import Finalists from "./Finalists";
 import Draw from "../Draw/Draw";
 
 describe("<Finalists />", () => {
+  beforeEach(() => {});
   it("renders", () => {
     cy.mount(<Finalists teamName={[]} />);
     cy.get(".Finalists button").contains("Submit");

@@ -3,13 +3,14 @@ import Teams from "./Teams";
 import Finalists from "../Finalists/Finalists";
 
 describe("<Teams />", () => {
-  it("renders", () => {
+  beforeEach(() => {
     cy.mount(<Teams />);
+  });
+  it("renders", () => {
     cy.get(".Teams button").contains("Add Team");
   });
 
   it("adds a team name to the list", () => {
-    cy.mount(<Teams />);
     const teamName = "Test Team";
     cy.get(".Teams input").type(teamName);
     cy.get(".Teams button[type='submit']").click();
@@ -19,7 +20,6 @@ describe("<Teams />", () => {
   });
 
   it("doesn't duplicate team names", () => {
-    cy.mount(<Teams />);
     const teamName = "Test Team";
     cy.get(".Teams input").type(teamName);
     cy.get(".Teams button[type='submit']").click();
@@ -29,14 +29,12 @@ describe("<Teams />", () => {
   });
 
   it("requires team name to be entered", () => {
-    cy.mount(<Teams />);
     cy.get(".Teams button[type='submit']").click();
     cy.get(".Teams li").should("not.exist");
     cy.get(".Teams p").should("contain.text", "Number of teams: 0");
   });
 
   it("renders finalists", () => {
-    cy.mount(<Teams />);
     cy.get(".Finalise").click();
     cy.mount(<Finalists teamName={[]} />);
   });

@@ -2,12 +2,11 @@ import React from "react";
 import Rounds from "./Rounds";
 
 describe("<Rounds />", () => {
-  it("renders", () => {
+  beforeEach(() => {
     cy.mount(<Rounds />);
   });
 
   it("checks the dates get rendered when entered", () => {
-    cy.mount(<Rounds />);
     const startDate = "2023-04-19";
     const endDate = "2023-08-16";
 
@@ -19,7 +18,6 @@ describe("<Rounds />", () => {
   });
 
   it("displays the amount of weeks the comp will run for", () => {
-    cy.mount(<Rounds />);
     const startDate = "2023-03-19";
     const endDate = "2023-09-16";
 
@@ -37,8 +35,6 @@ describe("<Rounds />", () => {
   });
 
   it("doesn't display number of weeks until start and end fields are selected", () => {
-    cy.mount(<Rounds />);
-
     const startDate = "2023-03-19";
     const endDate = "2023-09-16";
 
