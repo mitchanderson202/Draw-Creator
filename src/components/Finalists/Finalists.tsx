@@ -59,7 +59,7 @@ const Finalists = ({ teamName }: FinalistsProps) => {
         confirmFinalists && (
           <div>
             <p>{confirmFinalists}</p>
-            <Rounds />
+            <Rounds teamName={teamName} />
           </div>
         )
       )}

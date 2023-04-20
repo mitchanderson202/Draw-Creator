@@ -2,7 +2,11 @@ import Draw from "../Draw/Draw";
 import "./Rounds.scss";
 import { useState } from "react";
 
-const Rounds = () => {
+interface RoundsProps {
+  teamName: string[];
+}
+
+const Rounds = ({ teamName }: RoundsProps) => {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [renderDraw, setRenderDraw] = useState<boolean>(false);
@@ -46,7 +50,7 @@ const Rounds = () => {
           ""
         )}
         <button onClick={handleConfirm}>FINALISE</button>
-        {renderDraw && <Draw />}
+        {renderDraw && <Draw teamName={teamName} />}
       </div>
     </div>
   );

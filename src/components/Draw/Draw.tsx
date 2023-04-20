@@ -1,7 +1,25 @@
 import "./Draw.scss";
 
-const Draw = () => {
-  return <div className="Draw">Draw</div>;
+interface DrawProps {
+  teamName: string[];
+}
+
+const Draw = ({ teamName }: DrawProps) => {
+  return (
+    <div className="Draw">
+      <div className="Draw-Card">
+        <h1>Week (n)</h1>
+        <p>t v t</p>
+        <p>t v t</p>
+        <p>t v t</p>
+        <p>t v t</p>
+        <p>t v t</p>
+        <p>t v t</p>
+        <p>t v t</p>
+        <p>Bye?</p>
+      </div>
+    </div>
+  );
 };
 
 export default Draw;
