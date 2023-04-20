@@ -35,7 +35,7 @@ describe("<Teams />", () => {
     cy.get(".Teams p").should("contain.text", "Number of teams: 0");
   });
 
-  it("renders finalists field", () => {
+  it("renders finalists", () => {
     cy.mount(<Teams />);
     cy.get(".Finalise").click();
     cy.mount(<Finalists teamName={[]} />);

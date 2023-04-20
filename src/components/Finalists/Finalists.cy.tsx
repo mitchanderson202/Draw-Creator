@@ -1,5 +1,6 @@
 import React from "react";
 import Finalists from "./Finalists";
+import Draw from "../Draw/Draw";
 
 describe("<Finalists />", () => {
   it("renders", () => {
@@ -16,12 +17,18 @@ describe("<Finalists />", () => {
     cy.contains("Invalid team names");
   });
 
-  it("displays error when invalid teams are submitted", () => {
+  it("accepts input and displays the finalists from last year", () => {
     const teamName = ["Team A", "Team B", "Team C"];
     cy.mount(<Finalists teamName={teamName} />);
     cy.get(".FinalistsInput1").type("Team A");
     cy.get(".FinalistsInput2").type("Team B");
     cy.get(".Finalists button").click();
-    cy.contains("Teams confirmed");
+    cy.contains("Team A & Team B will open the season");
+  });
+
+  it("renders draw", () => {
+    cy.mount(<Finalists teamName={[]} />);
+    cy.get(".Finalists button").click();
+    cy.mount(<Draw />);
   });
 });

@@ -33,7 +33,9 @@ const Finalists = ({ teamName }: FinalistsProps) => {
     );
 
     if (match1 && match2) {
-      setConfirmFinalists("Teams confirmed");
+      setConfirmFinalists(
+        `${input1.value} & ${input2.value} will open the season`
+      );
     } else {
       setConfirmFinalists("Invalid team names");
     }

@@ -1,9 +1,11 @@
+import Draw from "../Draw/Draw";
 import "./Rounds.scss";
 import { useState, useRef } from "react";
 
 const Rounds = () => {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
+  const [renderDraw, setRenderDraw] = useState<boolean>(false);
 
   const handleStartChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setStartDate(e.target.value);
@@ -19,6 +21,10 @@ const Rounds = () => {
         millisecondsPerWeek
     );
     return differenceInWeeks;
+  };
+
+  const handleConfirm = () => {
+    setRenderDraw(true);
   };
 
   return (
@@ -39,6 +45,8 @@ const Rounds = () => {
         ) : (
           ""
         )}
+        <button onClick={handleConfirm}>CONFIRM</button>
+        {renderDraw && <Draw />}
       </div>
     </div>
   );
