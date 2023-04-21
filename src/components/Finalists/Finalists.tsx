@@ -6,8 +6,17 @@ interface FinalistsProps {
   teamName: string[];
 }
 
+const formatName = (name: string): string =>
+  name
+    .trim()
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+
 const Finalists = ({ teamName }: FinalistsProps) => {
   const [confirmFinalists, setConfirmFinalists] = useState<string>("");
+  const [finalistOne, setFinalistOne] = useState<string>("");
+  const [finalistTwo, setFinalistTwo] = useState<string>("");
 
   const teamCheck = (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,25 +27,15 @@ const Finalists = ({ teamName }: FinalistsProps) => {
       ".FinalistsInput2"
     ) as HTMLInputElement;
 
-    const match1 = teamName.includes(
-      input1.value
-        .trim()
-        .split(" ")
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(" ")
-    );
-    const match2 = teamName.includes(
-      input2.value
-        .trim()
-        .split(" ")
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(" ")
-    );
+    const name1 = formatName(input1.value);
+    const name2 = formatName(input2.value);
+    const match1 = teamName.includes(name1);
+    const match2 = teamName.includes(name2);
 
     if (match1 && match2) {
-      setConfirmFinalists(
-        `${input1.value} & ${input2.value} will open the season`
-      );
+      setConfirmFinalists(`${name1} & ${name2} will open the season`);
+      setFinalistOne(name1);
+      setFinalistTwo(name2);
     } else {
       setConfirmFinalists("Invalid team names");
     }
@@ -59,7 +58,11 @@ const Finalists = ({ teamName }: FinalistsProps) => {
         confirmFinalists && (
           <div>
             <p>{confirmFinalists}</p>
-            <Rounds teamName={teamName} />
+            <Rounds
+              teamName={teamName}
+              finalistOne={finalistOne}
+              finalistTwo={finalistTwo}
+            />
           </div>
         )
       )}

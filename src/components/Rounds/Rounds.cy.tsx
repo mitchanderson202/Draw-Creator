@@ -3,7 +3,16 @@ import Rounds from "./Rounds";
 
 describe("<Rounds />", () => {
   beforeEach(() => {
-    cy.mount(<Rounds />);
+    const teamName = ["Team A", "Team B", "Team C"];
+    const finalistOne = "Team A";
+    const finalistTwo = "Team B";
+    cy.mount(
+      <Rounds
+        teamName={teamName}
+        finalistOne={finalistOne}
+        finalistTwo={finalistTwo}
+      />
+    );
   });
 
   it("checks the dates get rendered when entered", () => {

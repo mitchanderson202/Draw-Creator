@@ -29,6 +29,6 @@ describe("<Finalists />", () => {
   it("renders draw", () => {
     cy.mount(<Finalists teamName={[]} />);
     cy.get(".Finalists button").click();
-    cy.mount(<Draw />);
+    cy.mount(<Draw teamName={[]} finalistOne="" finalistTwo="" weeks={0} />);
   });
 });

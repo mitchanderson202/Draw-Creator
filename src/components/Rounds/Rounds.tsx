@@ -4,9 +4,11 @@ import { useState } from "react";
 
 interface RoundsProps {
   teamName: string[];
+  finalistOne: string;
+  finalistTwo: string;
 }
 
-const Rounds = ({ teamName }: RoundsProps) => {
+const Rounds = ({ teamName, finalistOne, finalistTwo }: RoundsProps) => {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [renderDraw, setRenderDraw] = useState<boolean>(false);
@@ -50,7 +52,14 @@ const Rounds = ({ teamName }: RoundsProps) => {
           ""
         )}
         <button onClick={handleConfirm}>FINALISE</button>
-        {renderDraw && <Draw teamName={teamName} />}
+        {renderDraw && (
+          <Draw
+            teamName={teamName}
+            finalistOne={finalistOne}
+            finalistTwo={finalistTwo}
+            weeks={weeks()}
+          />
+        )}
       </div>
     </div>
   );
