@@ -1,3 +1,16 @@
 .Teams {
-  grid-row: 2/3;
+  width: 50vw;
+  margin: 0 auto;
+  ul {
+    display: grid;
+    list-style-type: circle;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.Finalise {
+  font-size: 1.4em;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 10px;
 }

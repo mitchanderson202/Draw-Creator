@@ -1,5 +1,4 @@
 import "./App.scss";
-import Rounds from "./components/Rounds/Rounds";
 import Teams from "./components/Teams/Teams";
 import Welcome from "./components/Welcome/Welcome";
 

@@ -36,22 +36,26 @@ const Teams = () => {
     <div className="Teams">
       <form onSubmit={handleAddTeam}>
         <h1>
-          Enter Team Names: <input required className="TeamsInput" />
+          Enter Team Names:{" "}
+          <input required className="TeamsInput" maxLength={30} />
           <button type="submit">Add Team</button>
         </h1>
       </form>
 
-      <p>Teams:</p>
+      <p>
+        <strong>Teams:</strong>
+      </p>
       <ul>
         {teamName.map((name) => (
           <li key={name}>{name}</li>
         ))}
       </ul>
 
-      <p>Number of teams: {teamName.length}</p>
-      <button onClick={handleFinalise} className="Finalise">
-        FINALISE
-      </button>
+      <p>
+        <strong>Number of teams: </strong>
+        {teamName.length}
+      </p>
+      <button onClick={handleFinalise}>FINALISE</button>
       {showFinalists && <Finalists teamName={teamName} />}
     </div>
   );
