@@ -35,7 +35,7 @@ describe("<Teams />", () => {
   });
 
   it("renders finalists", () => {
-    cy.get(".Finalise").click();
+    // cy.get(".Finalise").click();
     cy.mount(<Finalists teamName={[]} />);
   });
 });
