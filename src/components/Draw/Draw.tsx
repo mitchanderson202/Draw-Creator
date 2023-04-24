@@ -22,27 +22,27 @@ const Draw = ({ teamName, finalistOne, finalistTwo, weeks }: DrawProps) => {
     weeklyGames.push("BYE");
   }
 
-  const drawList = [];
+  const matchups = [];
+
   for (let i = 1; i <= weeks; i++) {
-    drawList.push(
+    const roundMatchups = [];
+    for (let j = 0; j < weeklyGames.length; j += 2) {
+      roundMatchups.push(
+        <li key={j}>
+          {weeklyGames[j]} vs {weeklyGames[j + 1]}
+        </li>
+      );
+    }
+    matchups.push(
       <div className="Draw-Card" key={i}>
         <h2>Round {i}</h2>
-        <li>
-          {weeklyGames[0]} vs {weeklyGames[1]}
-        </li>
-        <li>
-          {weeklyGames[2]} vs {weeklyGames[3]}
-        </li>
-        <li>
-          {weeklyGames[4]} vs {weeklyGames[5]}
-        </li>
+        <ul>{roundMatchups}</ul>
       </div>
     );
-
     weeklyGames.push(weeklyGames.shift());
   }
 
-  return <div className="Draw">{drawList}</div>;
+  return <div className="Draw">{matchups}</div>;
 };
 
 export default Draw;
