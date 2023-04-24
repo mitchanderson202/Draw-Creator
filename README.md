@@ -39,7 +39,6 @@
 - As many or as little teams as you want. If the Teams are uneven, then a BYE will be created each round for a team.
 - Last years Grand Finalists play eachother.
 - Will create a Draw for as long as you prompt it to.
-- Teams won't play eachother 5 times and another 0. It will iterate through each team before they play again.
 
 ---
 
