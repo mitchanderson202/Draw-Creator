@@ -2,6 +2,8 @@
 
 [![Cypress Tests](https://github.com/mitchanderson202/Draw-Creator/actions/workflows/main.yml/badge.svg)](https://github.com/mitchanderson202/Draw-Creator/actions/workflows/main.yml)
 
+WORK IN PROGRESS
+
 ## Demo & Snippets
 
 - Include hosted link
@@ -16,7 +18,7 @@
 - Select the Grand Finalists from last year(They will play first game in round 1).
 - Select Dates and a draw will be created.
 
-- Live Version:
+- Live Version: https://draw-e7df2.web.app/
 
 ---
 
@@ -44,25 +46,14 @@
 
 ## Known issues
 
-- Remaining bugs, things that have been left unfixed
-- Features that are buggy / flimsy
+- Currently the randomiser doesn't account for teams playing eachother in consecutive weeks.
+- Nothing to stop you finalising and then going back and continuing adding teams.
+- Needs more styling.
 
 ---
 
 ## Future Goals
 
-- What are the immediate features you'd add given more time
-
----
-
-## Change logs
-
-- Write a paragraph labelled with the date every day you work on the project to discuss what you've done for the say. Be specific about the changes that have happened for that day.
-
-### 13/02/2022 - {Theme of changes if applicable}
-
-- Extended the expiry time of JWT tokens on the backend
-- Added users to cohort response payload
-- Centralized API base URL on frontend using the proxy `package.json` property
+- Plenty more to come.
 
 ---
