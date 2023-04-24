@@ -22,6 +22,16 @@ const Draw = ({ teamName, finalistOne, finalistTwo, weeks }: DrawProps) => {
     weeklyGames.push("BYE");
   }
 
+  //Fisher-Yates (Knuth) shuffle Algorithm: Look into this and then replace.
+  function shuffleArray(array: string[]) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+  //end
+
   const matchups = [];
 
   for (let i = 1; i <= weeks; i++) {
@@ -39,7 +49,8 @@ const Draw = ({ teamName, finalistOne, finalistTwo, weeks }: DrawProps) => {
         <ul>{roundMatchups}</ul>
       </div>
     );
-    weeklyGames.push(weeklyGames.shift());
+
+    shuffleArray(weeklyGames);
   }
 
   return <div className="Draw">{matchups}</div>;

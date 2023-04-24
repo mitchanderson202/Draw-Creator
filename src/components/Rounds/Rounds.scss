@@ -1,18 +1,18 @@
 .Rounds {
-  grid-row: 3/4;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2fr 1fr;
+  // grid-row: 3/4;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr;
+  // grid-template-rows: 2fr 1fr;
 }
 
-.StartRound {
-  grid-column: 1/2;
-  grid-row: 1/2;
-}
-.EndRound {
-  grid-column: 2/3;
-  grid-row: 1/2;
-}
+// .StartRound {
+//   grid-column: 1/2;
+//   grid-row: 1/2;
+// }
+// .EndRound {
+//   grid-column: 2/3;
+//   grid-row: 1/2;
+// }
 
 .Weeks {
   grid-column: 1/3;

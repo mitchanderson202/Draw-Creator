@@ -2,10 +2,10 @@ import React from "react";
 import Rounds from "./Rounds";
 
 describe("<Rounds />", () => {
+  const teamName = ["Team A", "Team B", "Team C"];
+  const finalistOne = "Team A";
+  const finalistTwo = "Team B";
   beforeEach(() => {
-    const teamName = ["Team A", "Team B", "Team C"];
-    const finalistOne = "Team A";
-    const finalistTwo = "Team B";
     cy.mount(
       <Rounds
         teamName={teamName}
