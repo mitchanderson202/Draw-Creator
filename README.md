@@ -6,8 +6,7 @@ WORK IN PROGRESS
 
 ## Demo & Snippets
 
-- Include hosted link
-- Include images of app if CLI or Client App
+<img width="716" alt="draw-creator-img" src="https://user-images.githubusercontent.com/78459081/234441261-343a134d-e4d8-4ae8-90ca-3d779b4df318.png">
 
 ---
 
