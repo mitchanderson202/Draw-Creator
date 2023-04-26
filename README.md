@@ -6,7 +6,8 @@ WORK IN PROGRESS
 
 ## Demo & Snippets
 
-<img width="716" alt="draw-creator-img" src="https://user-images.githubusercontent.com/78459081/234441261-343a134d-e4d8-4ae8-90ca-3d779b4df318.png">
+<img width="1206" alt="draw-creator-img" src="https://user-images.githubusercontent.com/78459081/234442540-f88b2426-5dca-4a34-a432-b8a2b6e5d0ee.png">
+
 
 ---
 
