@@ -8,7 +8,6 @@ WORK IN PROGRESS
 
 <img width="1206" alt="draw-creator-img" src="https://user-images.githubusercontent.com/78459081/234442540-f88b2426-5dca-4a34-a432-b8a2b6e5d0ee.png">
 
-
 ---
 
 ## Requirements / Purpose
@@ -46,14 +45,8 @@ WORK IN PROGRESS
 
 ## Known issues
 
-- Currently the randomiser doesn't account for teams playing eachother in consecutive weeks.
+- Currently I'm using a slice method so each team will play through all the teams before playing eachother again. I'd like to alter this in the future but I need to think about the best approach. Current thought process is play each team once, shuffle the array randomly, then play through again.
 - Nothing to stop you finalising and then going back and continuing adding teams.
 - Needs more styling.
-
----
-
-## Future Goals
-
-- Plenty more to come.
 
 ---
