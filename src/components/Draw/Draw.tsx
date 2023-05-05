@@ -61,31 +61,3 @@ const Draw = ({ teamName, finalistOne, finalistTwo, weeks }: DrawProps) => {
 };
 
 export default Draw;
-
-// const temp = weeklyGames[j];
-//       weeklyGames[j] = weeklyGames[j + 1];
-//       weeklyGames[j + 1] = temp;
-//       const last = weeklyGames.pop();
-//       weeklyGames.splice(1, 0, last);
-//       const secondLast = weeklyGames.pop();
-//       weeklyGames.splice(2, 0, secondLast);
-
-// const rearrangeArray = (arr: (number | string)[]) => {
-//   const len = arr.length;
-//   const newArr = [];
-
-//   // loop over the array until the middle index is reached
-//   let i = 0;
-//   while (i < Math.floor(len / 2)) {
-//     newArr.push(arr[i]); // add the current element
-//     newArr.push(arr[len - 1 - i]); // add the corresponding element from the end
-//     i++;
-//   }
-
-//   // if the length of the array is odd, add the middle element to the end
-//   if (len % 2 !== 0) {
-//     newArr.push(arr[Math.floor(len / 2)]);
-//   }
-
-//   return newArr;
-// };

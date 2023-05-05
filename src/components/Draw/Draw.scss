@@ -3,9 +3,18 @@
   margin: 0 auto;
 }
 
+.Draw-Card {
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+  margin: 10px;
+  background-color: #c1cefe;
+}
+
 @media only screen and (max-width: 600px) {
   .Draw {
-    width: 100vw;
+    width: 80vw;
     text-align: center;
   }
 }

@@ -33,7 +33,7 @@ const Finalists = ({ teamName }: FinalistsProps) => {
     const match2 = teamName.includes(name2);
 
     if (match1 && match2) {
-      setConfirmFinalists(`${name1} & ${name2} will open the season`);
+      setConfirmFinalists(`${name1} & ${name2} will open the season!!!`);
       setFinalistOne(name1);
       setFinalistTwo(name2);
     } else {
@@ -57,7 +57,7 @@ const Finalists = ({ teamName }: FinalistsProps) => {
       ) : (
         confirmFinalists && (
           <div>
-            <p>{confirmFinalists}</p>
+            <h3>{confirmFinalists}</h3>
             <Rounds
               teamName={teamName}
               finalistOne={finalistOne}

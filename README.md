@@ -45,7 +45,7 @@ WORK IN PROGRESS
 
 ## Known issues
 
-- Currently I'm using a slice method so each team will play through all the teams before playing eachother again. I'd like to alter this in the future but I need to think about the best approach. Current thought process is play each team once, shuffle the array randomly, then play through again.
+- Currently, there's a Random Algorithm that is changing the teams between rounds. This isn't a final solution but it works well enough for now. This doesn't stop teams potentially playing eachother on back to back weeks, or playing 1 team once and another 3/4 times throughout the season.
 - Nothing to stop you finalising and then going back and continuing adding teams.
 - Needs more styling.
 
