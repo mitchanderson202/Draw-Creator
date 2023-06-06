@@ -21,16 +21,33 @@ const Draw = ({ teamName, finalistOne, finalistTwo, weeks }: DrawProps) => {
   if (weeklyGames.length % 2 === 1) {
     weeklyGames.push("BYE");
   }
-  //Fisher-Yates (Knuth) shuffle Algorithm: Look into this and then replace.
+  // //Fisher-Yates (Knuth) shuffle Algorithm: Look into this and then replace.
+  // function shuffleArray(array: string[]) {
+  //   for (let i = array.length - 1; i > 0; i--) {
+  //     const j = Math.floor(Math.random() * (i + 1));
+  //     [array[i], array[j]] = [array[j], array[i]];
+  //   }
+  //   return array;
+  // }
+
+  // //end
+
   function shuffleArray(array: string[]) {
+    let previousIndex = -1;
+
     for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
+      let currentIndex;
+
+      do {
+        currentIndex = Math.floor(Math.random() * (i + 1));
+      } while (currentIndex === previousIndex);
+
+      [array[i], array[currentIndex]] = [array[currentIndex], array[i]];
+      previousIndex = currentIndex;
     }
+
     return array;
   }
-
-  //end
 
   const matchups = [];
 
